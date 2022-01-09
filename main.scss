@@ -1,0 +1,59 @@
+@charset 'utf-8';
+
+//utilities
+@import "./utilities/variables";
+@import "./utilities/responsive";
+
+//bloques
+@import "./blocks/header";
+@import "./blocks/mainbanner";
+@import "./blocks/skills";
+@import "./blocks/work";
+@import "./blocks/contact";
+@import "./blocks/popUp";
+
+//resets
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+.main{
+    width: 100%;
+}
+.top {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: $main-color;
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 1;
+    bottom: 60px;
+    right: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border:1px solid white;
+    opacity: 0;
+  }
+  footer{
+      background: $secondary-color;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: .8rem;
+  }

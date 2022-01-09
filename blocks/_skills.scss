@@ -1,0 +1,200 @@
+.skills{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background: $main-color;
+    overflow-x: hidden;
+    z-index: 0;
+    h2{
+        width: 100%;
+        max-width: 1200px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 400;
+        align-self: center;
+        z-index: 1;
+    }
+    .skills__wrap{
+        display: grid;
+        width: 100%;
+        max-width: 1200px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 15px;
+        padding: 100px 0;
+        align-self: center;
+        position: relative;
+        .skills__elem{
+            width: 170px;
+            height: 170px;
+            margin-bottom: 50%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(9,9,121,0) 47%, rgb(116, 174, 228) 100%);
+            display: flex;
+            justify-content: center;
+            justify-self: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            z-index: 1;
+            img{
+                width: 50%;
+                height: auto;
+                transition: all .4s ease-in-out;
+            }
+            .skills__bar{
+                width: 100%;
+                height: 10px;
+                border:1px solid rgb(116, 174, 228);
+                position: absolute;
+                align-self: flex-end;
+                bottom: -25px;
+            }
+            &:hover{
+                background: radial-gradient(circle, rgb(116, 174, 228) 27%, rgba(9,9,121,0) 100%,);
+            }
+            &:hover img{
+                transform: rotateY(380deg);
+            }
+        }
+        .skills__elem--html{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 90%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        .skills__elem--css{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 90%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        .skills__elem--js{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 80%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+
+        .skills__elem--node{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 40%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        .skills__elem--mongo{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 50%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        .skills__elem--php{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 70%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        .skills__elem--mysql{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 65%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        .skills__elem--sass{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 60%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        .skills__elem--bootstrap{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width: 90%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        .skills__elem--wordpress{
+            .skills__bar{
+                &:after{
+                    content: "";
+                    width:80%;
+                    height: 8px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $secondary-color;
+                }
+            }
+        }
+        @include desktop{
+            grid-template-columns: repeat(4, 1fr);
+        };
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+        };
+    }
+
+}
